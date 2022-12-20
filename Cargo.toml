@@ -1,8 +1,8 @@
-[package]
-name = "fantasy_colony_builder"
-version = "0.1.0"
-edition = "2021"
+# Workspaces are a Cargo feature that can help you manage multiple related packages that are developed in tandem.
+# In this case, I use it to split the binary (the application) from the crates I have which offers bindings to various C libraries, such as GLFW.
+[workspace]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+members = [
+    "application",
+    "beagle_glfw"
+]
